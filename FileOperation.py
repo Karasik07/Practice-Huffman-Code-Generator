@@ -7,5 +7,4 @@ def funcReadFile(pathFile):
 
 def funcWriteFile(data):
     with open('code.json', 'w') as file:
-        data = json.loads(data)  
         json.dump(data, file)
