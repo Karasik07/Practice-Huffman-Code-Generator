@@ -1,7 +1,4 @@
-import os
-import re
-import json
-import shutil
+import os,re,json,shutil
 from datetime import datetime
 
 def funcReadFile(pathFile):
