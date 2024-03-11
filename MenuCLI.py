@@ -1,9 +1,11 @@
+from FileOperation import clearHistory
 from haffman import CodeGenerator
 def funcMenu():
      while True:
         print("\nВыбор действия:")
         print("[1] Генерация кода Хаффмана для текстовой информации")
-        print("[2] Завершение программы")
+        print("[2] Удаление истории генерации года Хаффмана")
+        print("[3] Завершение программы")
 
         try:
             choice = int(input("\nВыбор:"))
@@ -31,6 +33,8 @@ def funcMenu():
                 exit()
             else: print("Введённый код действия не существует."); continue
         elif (choice == 2):
+            clearHistory()
+        elif (choice == 3):
             exit()
         else: print("Введённый код действия не существует."); continue
 

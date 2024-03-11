@@ -1,5 +1,5 @@
 import json
-from FileOperation import funcReadFile,funcWriteFile
+from FileOperation import funcReadFile,funcWriteFile,funcMakeDir
 class CodeGenerator:
     class Node: #Дерево
         def __init__(self, left, right):
@@ -32,5 +32,5 @@ class CodeGenerator:
             freq = first[0]+second[0] #Полученик общей частоты элементов лево + право
             frequences.append((freq, self.Node(first[1], second[1]))) #Формирование дерева
         self.walk(frequences[0][1])
-        funcWriteFile(self.code)    
+        funcWriteFile(self.code,funcMakeDir())    
         return json.dumps(self.code, indent=4)
